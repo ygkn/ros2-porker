@@ -1,6 +1,6 @@
 from random import sample
 
-symbols = ['♠', '♥', '♦', '♣' ]
+suits = ['♠', '♥', '♦', '♣' ]
 
 class Porker:
   def __init__(self, numberOfPlayers):
@@ -27,5 +27,5 @@ class Porker:
     if(len(self.playerCards) < playerIndex):
       raise Exception("playerIndex is out of range")
     return ','.join(map(
-        lambda card: symbols[int(card / 13)] + '-' + str(card % 5 + 1)
+        lambda card: suits[int(card / 13)] + '-' + str(card % 5 + 1)
       ,self.playerCards[playerIndex]))
