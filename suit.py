@@ -14,4 +14,3 @@ class Suit:
   def __str__(self):
     return suitsDict.get(self.number)
     
-print(str(Suit(2)))
